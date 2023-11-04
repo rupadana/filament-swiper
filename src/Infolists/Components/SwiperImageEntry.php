@@ -112,26 +112,17 @@ class SwiperImageEntry extends ImageEntry
         return $this;
     }
 
-    /**
-     * @return bool
-     */
     public function getSpatie(): bool
     {
         return $this->spatie;
     }
 
-    /**
-     * @param bool $spatie
-     * @return SwiperImageEntry
-     */
     public function spatie(bool $spatie = true): SwiperImageEntry
     {
         $this->spatie = $spatie;
+
         return $this;
     }
-
-
-
 
     public function conversion(string | Closure | null $conversion): static
     {
@@ -150,10 +141,10 @@ class SwiperImageEntry extends ImageEntry
         return $this->evaluate($this->conversion);
     }
 
-    public function getImageUrl(?string $state = null): ?string
+    public function getImageUrl(string $state = null): ?string
     {
 
-        if($this->getSpatie() == false) {
+        if ($this->getSpatie() == false) {
             return parent::getImageUrl($state);
         }
 
@@ -195,7 +186,7 @@ class SwiperImageEntry extends ImageEntry
     public function getState(): array
     {
 
-        if($this->getSpatie() == false) {
+        if ($this->getSpatie() == false) {
             return parent::getState();
         }
 
