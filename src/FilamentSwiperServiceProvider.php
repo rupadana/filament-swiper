@@ -2,19 +2,17 @@
 
 namespace Rupadana\FilamentSwiper;
 
-use Filament\Support\Assets\AlpineComponent;
 use Filament\Support\Assets\Asset;
-use Filament\Support\Assets\Css;
 use Filament\Support\Assets\Js;
 use Filament\Support\Facades\FilamentAsset;
 use Filament\Support\Facades\FilamentIcon;
 use Illuminate\Filesystem\Filesystem;
 use Livewire\Features\SupportTesting\Testable;
+use Rupadana\FilamentSwiper\Commands\FilamentSwiperCommand;
+use Rupadana\FilamentSwiper\Testing\TestsFilamentSwiper;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Rupadana\FilamentSwiper\Commands\FilamentSwiperCommand;
-use Rupadana\FilamentSwiper\Testing\TestsFilamentSwiper;
 
 class FilamentSwiperServiceProvider extends PackageServiceProvider
 {

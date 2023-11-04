@@ -4,7 +4,8 @@ namespace Rupadana\FilamentSwiper\Infolists\Components\Concerns;
 
 use Rupadana\FilamentSwiper\Infolists\Components\SwiperImageEntry;
 
-trait HasPagination {
+trait HasPagination
+{
     protected bool $pagination = false;
 
     protected string $paginationType = SwiperImageEntry::BULLETS;
@@ -37,20 +38,15 @@ trait HasPagination {
     public function paginationType(string $type = SwiperImageEntry::BULLETS)
     {
         $this->paginationType = $type;
+
         return $this;
     }
 
-    /**
-     * @return bool
-     */
     public function getPaginationClickable(): bool
     {
         return $this->paginationClickable;
     }
 
-    /**
-     * @param bool $paginationClickable
-     */
     public function paginationClickable(bool $paginationClickable = true)
     {
         $this->paginationClickable = $paginationClickable;
@@ -58,17 +54,11 @@ trait HasPagination {
         return $this;
     }
 
-    /**
-     * @return bool
-     */
     public function getPaginationDynamicBullets(): bool
     {
         return $this->paginationDynamicBullets;
     }
 
-    /**
-     * @param bool $paginationDynamicBullets
-     */
     public function paginationDynamicBullets(bool $paginationDynamicBullets = true)
     {
         $this->paginationDynamicBullets = $paginationDynamicBullets;
@@ -76,41 +66,27 @@ trait HasPagination {
         return $this;
     }
 
-    /**
-     * @return int
-     */
     public function getPaginationDynamicMainBullets(): int
     {
         return $this->paginationDynamicMainBullets;
     }
 
-    /**
-     * @param int $paginationDynamicMainBullets
-     * @return HasPagination
-     */
     public function paginationDynamicMainBullets(int $paginationDynamicMainBullets): HasPagination
     {
         $this->paginationDynamicMainBullets = $paginationDynamicMainBullets;
+
         return $this;
     }
 
-    /**
-     * @return bool
-     */
     public function getPaginationHideOnClick(): bool
     {
         return $this->paginationHideOnClick;
     }
 
-    /**
-     * @param bool $paginationHideOnClick
-     * @return HasPagination
-     */
     public function paginationHideOnClick(bool $paginationHideOnClick = true): HasPagination
     {
         $this->paginationHideOnClick = $paginationHideOnClick;
+
         return $this;
     }
-
-
 }

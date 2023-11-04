@@ -9,16 +9,18 @@ use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasScrollbar;
 
 class SwiperImageEntry extends ImageEntry
 {
-
+    use HasEffect;
     use HasPagination;
     use HasScrollbar;
-    use HasEffect;
 
     const PROGRESSBAR = 'progressbar';
+
     const BULLETS = 'bullets';
+
     const FRACTIONAL = 'fraction';
 
     const FADE_EFFECT = 'fade';
+
     const COVERFLOW_EFFECT = 'coverflow';
 
     const CARDS_EFFECT = 'cards';
@@ -28,7 +30,6 @@ class SwiperImageEntry extends ImageEntry
     protected bool $navigation = true;
 
     protected bool $centeredSlides = false;
-
 
     protected bool $autoplay = false;
 
@@ -47,7 +48,6 @@ class SwiperImageEntry extends ImageEntry
 
         return $this;
     }
-
 
     public function getSlidesPerView(): int
     {
@@ -85,23 +85,15 @@ class SwiperImageEntry extends ImageEntry
         return $this;
     }
 
-    /**
-     * @return bool
-     */
     public function getCenteredSlides(): bool
     {
         return $this->centeredSlides;
     }
 
-    /**
-     * @param bool $centeredSlides
-     * @return SwiperImageEntry
-     */
     public function centeredSlides(bool $centeredSlides = true): SwiperImageEntry
     {
         $this->centeredSlides = $centeredSlides;
+
         return $this;
     }
-
-
 }
