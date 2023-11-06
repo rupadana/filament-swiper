@@ -2,13 +2,13 @@
 
 namespace Rupadana\FilamentSwiper\Infolists\Components\Concerns;
 
-use Rupadana\FilamentSwiper\Infolists\Components\SwiperImageEntry;
+use Rupadana\FilamentSwiper\Infolists\Components\Swiper;
 
 trait HasPagination
 {
     protected bool $pagination = false;
 
-    protected string $paginationType = SwiperImageEntry::BULLETS;
+    protected string $paginationType = Swiper::BULLETS;
 
     protected bool $paginationClickable = false;
 
@@ -35,7 +35,7 @@ trait HasPagination
         return $this->paginationType;
     }
 
-    public function paginationType(string $type = SwiperImageEntry::BULLETS)
+    public function paginationType(string $type = Swiper::BULLETS)
     {
         $this->paginationType = $type;
 
