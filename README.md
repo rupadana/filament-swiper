@@ -50,6 +50,36 @@ public function infolists(Infolists $infolists) {
 ```
 
 
+## Widget
+
+Create a class whatever u want. example ``App\Livewire\Widgets\Swipget`` and extends ``Rupadana\FilamentSwiper\Widgets\SwiperWidget``,
+
+```php
+<?php
+
+namespace App\Livewire\Widgets;
+
+use App\Livewire\Components\Feature;
+use Rupadana\FilamentSwiper\Widgets\SwiperWidget;
+
+class Swipget extends SwiperWidget
+{
+
+    public function getComponents(): array
+    {
+        return [
+            // Your livewire component
+        ];
+    }
+}
+
+```
+
+and register it to your Filament Provider
+
+
+
+
 ## Bugs
 
 There is a bug. we need contributor to fix it. 
