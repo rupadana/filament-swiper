@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/rupadana/filament-swiper.svg?style=flat-square)](https://packagist.org/packages/rupadana/filament-swiper)
 
 
-![Image](./docs/images/filament-swiper-image.png)
+![Image](https://raw.githubusercontent.com/rupadana/filament-swiper/main/docs/images/filament-swiper-image.png)
 
 This is a Swiper Component for filament, using [SwiperJS](https://swiperjs.com/).
 
