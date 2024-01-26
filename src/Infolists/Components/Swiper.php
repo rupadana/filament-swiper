@@ -2,7 +2,6 @@
 
 namespace Rupadana\FilamentSwiper\Infolists\Components;
 
-use App\Livewire\Components\Section;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasEffect;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasLoop;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasPagination;
@@ -117,7 +116,7 @@ class Swiper extends Section
 
     public function getChildComponentContainers(bool $withHidden = false): array
     {
-        if (! $this->hasChildComponentContainer($withHidden)) {
+        if (!$this->hasChildComponentContainer($withHidden)) {
             return [];
         }
 

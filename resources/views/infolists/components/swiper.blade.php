@@ -1,6 +1,4 @@
-
 <style>
-
     * {
         --swiper-theme-color: rgba(var(--primary-600));
         --swiper-scrollbar-drag-bg-color: rgba(var(--primary-600));
@@ -33,19 +31,14 @@
         {{$getTitle()}}
     </h2>
 
-    <div
-        {{
+    <div {{
             $attributes
                 ->merge($getExtraAttributes(), escape: false)
                 ->class([
                     'fi-in-image flex items-center gap-x-2.5 max-w-7xl mx-auto px-6 md:px-12 xl:px-6 mt-16',
                 ])
-        }}
-
-        ax-load
-        ax-load-src="{{\Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts',
-        'rupadana/filament-swiper')}}"
-    >
+        }} ax-load ax-load-src="{{\Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts',
+        'rupadana/filament-swiper')}}">
 
 
 
