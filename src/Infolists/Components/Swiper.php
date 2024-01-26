@@ -116,7 +116,7 @@ class Swiper extends Section
 
     public function getChildComponentContainers(bool $withHidden = false): array
     {
-        if (!$this->hasChildComponentContainer($withHidden)) {
+        if (! $this->hasChildComponentContainer($withHidden)) {
             return [];
         }
 

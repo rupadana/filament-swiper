@@ -2,13 +2,11 @@
 
 namespace Rupadana\FilamentSwiper\Infolists\Components;
 
-
 use Closure;
 use Filament\Infolists\Components\Component;
 use Filament\Infolists\Components\Concerns\CanBeCollapsed;
 use Filament\Infolists\Components\Concerns\CanBeCompacted;
 use Filament\Infolists\Components\Concerns\EntanglesStateWithSingularRelationship;
-use Filament\Infolists\Components\Concerns\HasHeaderActions;
 use Filament\Support\Concerns\HasDescription;
 use Filament\Support\Concerns\HasExtraAlpineAttributes;
 use Filament\Support\Concerns\HasHeading;

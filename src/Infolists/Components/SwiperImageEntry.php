@@ -141,7 +141,7 @@ class SwiperImageEntry extends ImageEntry
         return $this->evaluate($this->conversion);
     }
 
-    public function getImageUrl(string $state = null): ?string
+    public function getImageUrl(?string $state = null): ?string
     {
 
         if ($this->getSpatie() == false) {
@@ -150,7 +150,7 @@ class SwiperImageEntry extends ImageEntry
 
         $record = $this->getRecord();
 
-        if (!$record) {
+        if (! $record) {
             return null;
         }
 
@@ -163,7 +163,7 @@ class SwiperImageEntry extends ImageEntry
         /** @var ?Media $media */
         $media = $record->media->first(fn (Media $media): bool => $media->uuid === $state);
 
-        if (!$media) {
+        if (! $media) {
             return null;
         }
 
