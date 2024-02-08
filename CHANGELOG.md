@@ -2,6 +2,10 @@
 
 All notable changes to `filament-swiper` will be documented in this file.
 
+## 3.0.2-beta - 2024-02-08
+
+**Full Changelog**: https://github.com/rupadana/filament-swiper/compare/3.0.1-beta...3.0.2-beta
+
 ## 3.0.1-beta - 2024-01-26
 
 ### What's Changed
