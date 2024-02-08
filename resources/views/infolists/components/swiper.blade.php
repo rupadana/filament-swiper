@@ -6,6 +6,7 @@
 
     swiper-container {
         width: 100%;
+        max-width: 100vw;
     }
 
     swiper-slide {
@@ -28,17 +29,12 @@
 
 <div class="py-16">
     <h2 class="mt-4 text-center text-2xl font-bold text-gray-800 dark:text-white md:text-4xl ">
-        {{$getTitle()}}
+        {{ $getTitle() }}
     </h2>
 
-    <div {{
-            $attributes
-                ->merge($getExtraAttributes(), escape: false)
-                ->class([
-                    'fi-in-image flex items-center gap-x-2.5 max-w-7xl mx-auto px-6 md:px-12 xl:px-6 mt-16',
-                ])
-        }} ax-load ax-load-src="{{\Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts',
-        'rupadana/filament-swiper')}}">
+    <div {{ $attributes->merge($getExtraAttributes(), escape: false)->class(['fi-in-image flex items-center gap-x-2.5 max-w-7xl mx-auto px-6 md:px-12 xl:px-6 mt-16']) }}
+        ax-load
+        ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts', 'rupadana/filament-swiper') }}">
 
 
 
