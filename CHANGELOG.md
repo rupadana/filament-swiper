@@ -2,6 +2,18 @@
 
 All notable changes to `filament-swiper` will be documented in this file.
 
+## 3.0.3-beta - 2024-03-16
+
+### What's Changed
+
+* change: Support laravel 11 by @rupadana in https://github.com/rupadana/filament-swiper/pull/6
+
+### New Contributors
+
+* @rupadana made their first contribution in https://github.com/rupadana/filament-swiper/pull/6
+
+**Full Changelog**: https://github.com/rupadana/filament-swiper/compare/3.0.2-beta...3.0.3-beta
+
 ## 3.0.2-beta - 2024-02-08
 
 **Full Changelog**: https://github.com/rupadana/filament-swiper/compare/3.0.1-beta...3.0.2-beta
