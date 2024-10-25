@@ -71,7 +71,7 @@ trait HasPagination
         return $this->paginationDynamicMainBullets;
     }
 
-    public function paginationDynamicMainBullets(int $paginationDynamicMainBullets): HasPagination
+    public function paginationDynamicMainBullets(int $paginationDynamicMainBullets)
     {
         $this->paginationDynamicMainBullets = $paginationDynamicMainBullets;
 
@@ -83,7 +83,7 @@ trait HasPagination
         return $this->paginationHideOnClick;
     }
 
-    public function paginationHideOnClick(bool $paginationHideOnClick = true): HasPagination
+    public function paginationHideOnClick(bool $paginationHideOnClick = true)
     {
         $this->paginationHideOnClick = $paginationHideOnClick;
 
