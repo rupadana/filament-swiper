@@ -2,6 +2,21 @@
 
 All notable changes to `filament-swiper` will be documented in this file.
 
+## 3.0.4-beta - 2024-10-28
+
+### What's Changed
+
+* Bump tsickert/discord-webhook from 5.3.0 to 5.4.0 by @dependabot in https://github.com/rupadana/filament-swiper/pull/7
+* Bump tsickert/discord-webhook from 5.4.0 to 5.5.0 by @dependabot in https://github.com/rupadana/filament-swiper/pull/9
+* Bump aglipanci/laravel-pint-action from 2.3.1 to 2.4 by @dependabot in https://github.com/rupadana/filament-swiper/pull/11
+* fix paginationHideOnClick by @sadegh19b in https://github.com/rupadana/filament-swiper/pull/14
+
+### New Contributors
+
+* @sadegh19b made their first contribution in https://github.com/rupadana/filament-swiper/pull/14
+
+**Full Changelog**: https://github.com/rupadana/filament-swiper/compare/3.0.3-beta...3.0.4-beta
+
 ## 3.0.3-beta - 2024-03-16
 
 ### What's Changed
