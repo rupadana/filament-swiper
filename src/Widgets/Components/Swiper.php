@@ -49,7 +49,7 @@ class Swiper extends ViewComponent
 
     public static function make()
     {
-        $static = new static();
+        $static = new static;
 
         return $static;
     }

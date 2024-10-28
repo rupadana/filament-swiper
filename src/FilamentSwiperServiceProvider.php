@@ -51,9 +51,7 @@ class FilamentSwiperServiceProvider extends PackageServiceProvider
         }
     }
 
-    public function packageRegistered(): void
-    {
-    }
+    public function packageRegistered(): void {}
 
     public function packageBooted(): void
     {
@@ -81,7 +79,7 @@ class FilamentSwiperServiceProvider extends PackageServiceProvider
         }
 
         // Testing
-        Testable::mixin(new TestsFilamentSwiper());
+        Testable::mixin(new TestsFilamentSwiper);
     }
 
     protected function getAssetPackageName(): ?string

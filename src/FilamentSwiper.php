@@ -2,6 +2,4 @@
 
 namespace Rupadana\FilamentSwiper;
 
-class FilamentSwiper
-{
-}
+class FilamentSwiper {}
