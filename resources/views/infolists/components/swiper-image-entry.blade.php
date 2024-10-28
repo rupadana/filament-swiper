@@ -91,7 +91,7 @@
         <swiper-container
             @if ($autoplay) autoplay-delay="{{ $autoplayDelay }}" autoplay="@js($autoplay)" @endif
             slides-per-view="@js($slidesPerView)" @if ($navigation) navigation="@js($navigation)" @endif
-            @if ($pagination) pagination="@js($pagination)" pagination-type="{{ $paginationType }}" pagination-clickable="@js($paginationClickable)" pagination-dynamic-bullets="@js($paginationDynamicBullets)" pagination-dynamic-main-bullets="{{ $paginationDynamicMainBullets }}" pagination-hide-on-click="{{ $paginationHideOnClick }}" @endif
+            @if ($pagination) pagination="@js($pagination)" pagination-type="{{ $paginationType }}" pagination-clickable="@js($paginationClickable)" pagination-dynamic-bullets="@js($paginationDynamicBullets)" pagination-dynamic-main-bullets="{{ $paginationDynamicMainBullets }}" pagination-hide-on-click="@js($paginationHideOnClick)" @endif
             @if ($scrollbar) scrollbar="@js($scrollbar)" scrollbar-draggable="@js($scrollbarDraggable)" scrollbar-drag-size="{{ $scrollbarDragSize }}" scrollbar-hide="@js($scrollbarHide)" scrollbar-snap-on-release="@js($scrollbarSnapOnRelease)" @endif
             effect="{{ $effect }}"
             @if ($effect == \Rupadana\FilamentSwiper\Infolists\Components\SwiperImageEntry::COVERFLOW_EFFECT) coverflow-effect-modifier="@js($getCoverflowEffectModifier())" coverflow-depth="@js($getCoverflowDepth())" coverflow-slide-shadows="@js($getCoverflowSlideShadows())" coverflow-stretch="@js($getCoverflowStretch())" @endif

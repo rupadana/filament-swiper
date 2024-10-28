@@ -100,7 +100,7 @@
             pagination-clickable="@js($paginationClickable)"
             pagination-dynamic-bullets="@js($paginationDynamicBullets)"
             pagination-dynamic-main-bullets="{{$paginationDynamicMainBullets}}"
-            pagination-hide-on-click="{{$paginationHideOnClick}}"
+            pagination-hide-on-click="@js($paginationHideOnClick)"
             @endif
 
             @if($scrollbar)
