@@ -71,7 +71,6 @@
     swiper-slide {
         text-align: center;
         font-size: 18px;
-        background: #fff;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -85,13 +84,16 @@
     }
 </style>
 <div {{ $attributes->merge($getExtraAttributes(), escape: false)->class(['fi-in-image flex items-center gap-x-2.5']) }}
-    ax-load
-    ax-load-src="{{ \Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts', 'rupadana/filament-swiper') }}">
+    x-load
+    x-load-src="{{ \Filament\Support\Facades\FilamentAsset::getScriptSrc('filament-swiper-scripts', 'rupadana/filament-swiper') }}">
     @if (count($limitedState))
         <swiper-container
+            auto-height="true" {{-- Added this line so that the modals height will auto size --}}
+            style="--swiper-navigation-color: #12abe2" {{-- Padmission Blue --}}
+            keyboard="true"
             @if ($autoplay) autoplay-delay="{{ $autoplayDelay }}" autoplay="@js($autoplay)" @endif
             slides-per-view="@js($slidesPerView)" @if ($navigation) navigation="@js($navigation)" @endif
-            @if ($pagination) pagination="@js($pagination)" pagination-type="{{ $paginationType }}" pagination-clickable="@js($paginationClickable)" pagination-dynamic-bullets="@js($paginationDynamicBullets)" pagination-dynamic-main-bullets="{{ $paginationDynamicMainBullets }}" pagination-hide-on-click="@js($paginationHideOnClick)" @endif
+            @if ($pagination) pagination="@js($pagination)" pagination-type="{{ $paginationType }}" pagination-clickable="@js($paginationClickable)" pagination-dynamic-bullets="@js($paginationDynamicBullets)" pagination-dynamic-main-bullets="{{ $paginationDynamicMainBullets }}" pagination-hide-on-click="{{ $paginationHideOnClick }}" @endif
             @if ($scrollbar) scrollbar="@js($scrollbar)" scrollbar-draggable="@js($scrollbarDraggable)" scrollbar-drag-size="{{ $scrollbarDragSize }}" scrollbar-hide="@js($scrollbarHide)" scrollbar-snap-on-release="@js($scrollbarSnapOnRelease)" @endif
             effect="{{ $effect }}"
             @if ($effect == \Rupadana\FilamentSwiper\Infolists\Components\SwiperImageEntry::COVERFLOW_EFFECT) coverflow-effect-modifier="@js($getCoverflowEffectModifier())" coverflow-depth="@js($getCoverflowDepth())" coverflow-slide-shadows="@js($getCoverflowSlideShadows())" coverflow-stretch="@js($getCoverflowStretch())" @endif
@@ -99,11 +101,15 @@
             centered-slides="@js($getCenteredSlides())">
             @foreach ($limitedState as $stateItem)
                 <swiper-slide>
-                    <img src="{{ filled($stateItem) ? $getImageUrl($stateItem) : $defaultImageUrl }}"
-                        {{ $getExtraImgAttributeBag()->class(['max-w-none object-cover object-center', 'rounded-full' => $isCircular, $ringClasses])->style([
-                                "height: {$height}" => $height,
-                                "width: {$width}" => $width,
-                            ]) }} />
+                    @if (str($stateItem)->startsWith('<div'))
+                        {!! $stateItem !!}
+                    @else
+                        <img src="{{ filled($stateItem) ? $getImageUrl($stateItem) : $defaultImageUrl }}"
+                            {{ $getExtraImgAttributeBag()->class(['max-w-none object-cover object-center', 'rounded-full' => $isCircular, $ringClasses])->style([
+                                    "height: {$height}" => $height,
+                                    "width: {$width}" => $width,
+                                ]) }} />
+                    @endif
                 </swiper-slide>
             @endforeach
 
@@ -144,8 +150,8 @@
             </div>
         @endif
     @elseif (($placeholder = $getPlaceholder()) !== null)
-        <x-filament-infolists::entries.placeholder>
+        <div class="fi-in-placeholder text-sm leading-6 text-gray-400 dark:text-gray-500">
             {{ $placeholder }}
-        </x-filament-infolists::entries.placeholder>
+        </div>
     @endif
 </div>

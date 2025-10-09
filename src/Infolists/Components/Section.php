@@ -93,7 +93,7 @@ class Section extends Component
         return $id;
     }
 
-    public function getKey(): ?string
+    public function getKey(bool $isAbsolute = true): ?string
     {
         return parent::getKey() ?? ($this->getActions() ? $this->getId() : null);
     }

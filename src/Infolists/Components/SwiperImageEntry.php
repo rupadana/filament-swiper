@@ -2,12 +2,14 @@
 
 namespace Rupadana\FilamentSwiper\Infolists\Components;
 
+use Closure;
 use Filament\Infolists\Components\ImageEntry;
 use Illuminate\Support\Arr;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasEffect;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasPagination;
 use Rupadana\FilamentSwiper\Infolists\Components\Concerns\HasScrollbar;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
+use Throwable;
 
 class SwiperImageEntry extends ImageEntry
 {
